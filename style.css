@@ -26,7 +26,16 @@ h1 {
   margin-bottom: 18px;
   align-items: center;
 }
+.text_popup{
+  display: flex;
+  justify-content: center;
+  color: #06dfeb;
+  font-weight: bolder;
+  margin-bottom: 25px;
+}
+
 .container {
+  display: grid;
   margin: auto;
   border: 1px solid black;
   height: 450px;
