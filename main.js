@@ -1,4 +1,5 @@
 console.log("it's running");
+let color = "black"
 let textpop = document.querySelector(".text_popup");
 let container = document.querySelector(".container")
 
@@ -8,7 +9,7 @@ function genarateing_grids(value){
 
     for(let i = 0;i<value*value; i++){
     let div = document.createElement("div");
-    div.addEventListener("mouseover",selector)
+    div.addEventListener("click",selector)
     container.insertAdjacentElement ("beforeend",div);
     }
 
@@ -31,5 +32,25 @@ function popup() {
 }
 
 function selector(){
+    if (color=="random"){
+        let r = Math.floor(Math.random() * 255)
+        let g = Math.floor(Math.random() * 255)
+        let b = Math.floor(Math.random() * 255)
+        
+            let x=  `rgb(${r},${g},${b})`
+            this.style.backgroundColor = x;
 
+    }
+    else{
+        this.style.backgroundColor = "black"
+
+    }
 }
+
+function reset_func(){
+    let divCollection = document.querySelectorAll(".container div")
+    divCollection.forEach(e=> {
+        e.style.backgroundColor="white"
+    });
+}
+
