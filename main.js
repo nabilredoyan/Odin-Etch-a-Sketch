@@ -1,7 +1,10 @@
 console.log("it's running");
 let color = "black"
 let textpop = document.querySelector(".text_popup");
-let container = document.querySelector(".container")
+let container = document.querySelector(".container");
+
+
+let mode ="click"
 
 function genarateing_grids(value){
     container.style.gridTemplateColumns = `repeat(${value} , 1fr)`;
@@ -9,7 +12,14 @@ function genarateing_grids(value){
 
     for(let i = 0;i<value*value; i++){
     let div = document.createElement("div");
-    div.addEventListener("click",selector)
+    if(mode ==="click"){
+
+        div.addEventListener("click",selector)
+    }
+    else{
+        div.addEventListener("mouseover",selector)
+
+    }
     container.insertAdjacentElement ("beforeend",div);
     }
 
