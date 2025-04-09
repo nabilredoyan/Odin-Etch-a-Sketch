@@ -18,10 +18,11 @@
 
     <div class="buttons">
       <button class="random btn" onclick="color='random'">random</button>
-      <button class="black btn" onclick="color='black'">black</button>
-      <button class="reset btn" onclick="reset_func()">reset</button>
-      <button class="btn hover" onclick="mode='hover'">Hover</button>
-      <button class="btn click" onclick="mode='click'">Click</button>
+      <button class="enter btn" onclick="color='black'">black</button>
+      <button class="enter btn" onclick="reset_func()">reset</button>
+      <button class="btn hover enter" onclick="select_mode('mouseover')">Hover</button>
+      <button class="btn click enter" onclick="select_mode('click')">Click</button>
+      
     </div>
     <script src="main.js"></script>
   </body>

@@ -4,15 +4,25 @@ let textpop = document.querySelector(".text_popup");
 let container = document.querySelector(".container");
 
 
-let mode ="click"
+let mode ="mouseover"
+
+function select_mode(newmode){
+    mode = newmode;
+    genarateing_grids(gridcount);
+}
+
+let gridcount = 16;
 
 function genarateing_grids(value){
+
     container.style.gridTemplateColumns = `repeat(${value} , 1fr)`;
     container.style.gridTemplateRows = `repeat(${value}, 1fr)`;
+    gridcount = value;
+    container.innerHTML = "";
 
     for(let i = 0;i<value*value; i++){
     let div = document.createElement("div");
-    if(mode ==="click"){
+    if(mode =="click"){
 
         div.addEventListener("click",selector)
     }
@@ -20,11 +30,12 @@ function genarateing_grids(value){
         div.addEventListener("mouseover",selector)
 
     }
+
     container.insertAdjacentElement ("beforeend",div);
     }
 
 }
-genarateing_grids(16);
+genarateing_grids(gridcount);
 
 
 function popup() {
