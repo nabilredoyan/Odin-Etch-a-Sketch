@@ -12,20 +12,17 @@
       <span class="text">Click this to set size:</span>
       <button class="enter btn" onclick="popup()">enter</button>
     </div>
-    <div class="text_popup">
-      
-    </div>
+    <div class="text_popup"></div>
 
-
-    <div class="container">
-
-    </div>
+    <div class="container"></div>
 
     <div class="buttons">
-
-        <button class="random btn">random</button>
-        <button class="black btn">black</button>
-        <button class="reset btn">reset</button>
+      <button class="random btn" onclick="color='random'">random</button>
+      <button class="enter btn" onclick="color='black'">black</button>
+      <button class="enter btn" onclick="reset_func()">reset</button>
+      <button class="btn hover enter" onclick="select_mode('mouseover')">Hover</button>
+      <button class="btn click enter" onclick="select_mode('click')">Click</button>
+      
     </div>
     <script src="main.js"></script>
   </body>
